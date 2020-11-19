@@ -1,5 +1,7 @@
 # 18 Nov 2020 
-setwd("C:/Users/ngoca/Dropbox/Pubs_since_2018/2021_Divestment_Sample_Selection/Data/RawData")
+path <- "C:/Users/ngoca/Dropbox/Pubs_since_2018/2021_Divestment_Sample_Selection/Data/"
+
+setwd(paste0(path,"RawData"))
 
 library(RCurl)
 library(openxlsx)
@@ -11,7 +13,7 @@ isolist <- iso3$Isocode
 # isolist<- append(isolist, "CHN")
 i =0
 errorlist <- list("1")
-setwd("C:/Users/ngoca/Dropbox/Pubs_since_2018/2021_Divestment_Sample_Selection/Data/RawData/UNCTAD_FDI_data")
+setwd(paste0(path,"RawData/UNCTAD_FDI_data"))
 
 for (iso in isolist) {
     i = i+1
